@@ -1,0 +1,9 @@
+canvas{
+	background-color: black;
+}
+
+score{
+	background-color: blueviolet; font-size:medium;
+}
+
+name{ text-align: right; background-color: aliceblue;}
