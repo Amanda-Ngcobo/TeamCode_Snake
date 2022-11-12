@@ -1,5 +1,23 @@
 canvas{
+	border: 3px solid white;
 	background-color: black;
+	position: absolute;
+	top: 100px;
+}
+body{
+	margin:0; 
+	padding: 0;
+	background: hsl(0, 100%, 100%);
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+}
+p{
+	font-family: segoe ui;
+	font-size: 3 em; 
+	color: #fff; 
+	position: absolute; 
+	top: 20px;
 }
 
 score{
