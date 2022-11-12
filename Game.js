@@ -122,22 +122,24 @@ function draw(){
 			if(head.x == array[i].x && head.y == array[i].y)
 			{
 				score -=2;
-				//code for speed to decrease should go here
+				//code for speed to decrease 
 				if((g > 50) || (g < 500)) {
 				game = setInterval(draw, g-=10);
 				} else g = 100;
-				
+
 				return true;
+
 			}
 		}
 		return false;
 	}
 	//game over
 	if(snakeX < box || snakeY < box || 
-		snakeX > ((canvasSize - 1) * box)|| snakeY > ((canvasSize - 1) * box) ||
+		snakeX > ((canvasSize ) * box)|| snakeY > ((canvasSize ) * box) ||
 		collision(newHead,snake))
 	{
 		alert('Game Over');
+		result = window.confirm('Are you sure you want to exit the game?');
 		clearInterval(game);
 	}
 
@@ -150,9 +152,8 @@ function draw(){
 	ctx.fillStyle = 'white';
 	ctx.font = '24px Changa one';
 	ctx.clearRect(0, 0, 50, 25);
-	ctx.fillText(score, box, 0.8 * box);
-
+	ctx.fillText('Score: ' +score, box, 0.8 * box);
 
 }
-let g = 400
+let g = 300
 let game = setInterval(draw, 100);
